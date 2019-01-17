@@ -34,6 +34,7 @@ COPY "./files-to-copy-to-image/settings.xml" "/usr/share/kodi/system/settings"
 RUN  mkdir -p /config/kodi/userdata >/dev/null 2>&1 || true && rm -rf /root/.kodi && ln -s /config/kodi /root/.kodi \
     && mkdir -p /data >/dev/null 2>&1
 
+RUN apt-get update && apt-get install -y gdb
 # ports and volumes
 VOLUME /config/kodi
 VOLUME /data
