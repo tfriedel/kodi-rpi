@@ -6,7 +6,7 @@ RUN [ "cross-build-start" ]
 RUN apt-get update && apt-get install -y wget && echo "deb http://pipplware.pplware.pt/pipplware/dists/unstable/main/binary /" > /etc/apt/sources.list.d/pipplware_unstable.list && \
     wget -O - http://pipplware.pplware.pt/pipplware/key.asc | sudo apt-key add -
 RUN apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get install -y --no-install-recommends xserver-xorg xinit \
-     fbset libraspberrypi0 alsa-base alsa-utils alsa-tools kodi xserver-xorg-legacy dbus-x11 \
+     fbset libraspberrypi0 alsa-base alsa-utils alsa-tools kodi=2:18.0~git20181123.0454-rc1-1~stretch xserver-xorg-legacy dbus-x11 \
      && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Uncomment if you want to install recommanded PVR addons
