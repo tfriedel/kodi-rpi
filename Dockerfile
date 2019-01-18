@@ -10,10 +10,10 @@ RUN apt-get clean && apt-get update && apt-get dist-upgrade -y && apt-get instal
      && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Uncomment if you want to install recommanded PVR addons
-RUN apt-get update && apt-get install -y kodi-pvr-mythtv kodi-pvr-vuplus kodi-pvr-vdr-vnsi kodi-pvr-njoy \
- kodi-pvr-nextpvr kodi-pvr-mediaportal-tvserver kodi-pvr-tvheadend-hts \
- kodi-pvr-dvbviewer kodi-pvr-argustv kodi-pvr-iptvsimple libnss3 \
- && apt-get clean && rm -rf /var/lib/apt/lists/*
+#RUN apt-get update && apt-get install -y kodi-pvr-mythtv kodi-pvr-vuplus kodi-pvr-vdr-vnsi kodi-pvr-njoy \
+# kodi-pvr-nextpvr kodi-pvr-mediaportal-tvserver kodi-pvr-tvheadend-hts \
+# kodi-pvr-dvbviewer kodi-pvr-argustv kodi-pvr-iptvsimple libnss3 \
+# && apt-get clean && rm -rf /var/lib/apt/lists/*
  
 # Configure Kodi group
 RUN usermod -a -G audio root && \
